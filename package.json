@@ -1,0 +1,24 @@
+{
+  "name": "3.6-example-handling-form-data-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opencourse5tutor/3.6-Example-Handling-Form-Data-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opencourse5tutor/3.6-Example-Handling-Form-Data-Backend/issues"
+  },
+  "homepage": "https://github.com/opencourse5tutor/3.6-Example-Handling-Form-Data-Backend#readme"
+}
