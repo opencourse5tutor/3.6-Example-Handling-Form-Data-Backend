@@ -50,11 +50,44 @@ var products = [
   },
 ];
 
+//HTTP GET method
 app.get("/api/products", (req, res, next) => {
-  res.json({
-    message: "success",
-    data: products,
-  });
+  try{
+    res.status(200).json({
+      message: "success",
+      data: products,
+    });
+  }
+  catch(E){
+    res.status(400).send(E);
+  }
 });
 
-app.post("api/products", (req, res, next) => {});
+//HTTP POST method
+app.post("/api/products", (req, res, next) => {
+    try{
+         const {
+           productName,
+           description,
+           unitPrice,
+         } = req.body;
+
+         var lastId = products.length + 1;
+         var newProduct = {
+             id: "00" + lastId,
+             productName: productName,
+             unitPrice: unitPrice,
+             description: description 
+         };
+         products.push(newProduct);
+
+         res.status(200).json({
+           message: "success",
+           data: newProduct,
+           id: newProduct.id
+         });
+    }
+    catch(E){
+        res.status(400).send(E); 
+    }
+});
