@@ -24,7 +24,7 @@ app.listen(HTTP_PORT, () => {
 });
 
 //HTTP GET method
-app.get("/products", (req, res, next) => {
+app.get("/api/products", (req, res, next) => {
   try {
     //SQL query to select all data
     var sql = "select * from products";
@@ -50,7 +50,7 @@ app.get("/products", (req, res, next) => {
 });
 
 //HTTP POST method
-app.put("/api/products", (req, res, next) => {
+app.post("/api/products", (req, res, next) => {
   try {
     const { productName, description, unitPrice } = req.body;
 
